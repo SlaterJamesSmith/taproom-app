@@ -1,0 +1,11 @@
+<form class="" action="index.html" method="post">
+  <label for="">Name</label>
+  <input #kegName type="text">
+  <label for="">Brand</label>
+  <input #kegBrand type="text">
+  <label for="">Price</label>
+  <input #kegPrice type="text">
+  <label for="">Alcohol %</label>
+  <input #kegPercent type="text">
+  <button (click)="submitKeg(kegName.value, kegBrand.value, kegPrice.value, kegPercent.value)" type="button" name="button">Submit</button>
+</form>
