@@ -9,10 +9,6 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class NewKegFormComponent {
 
-  // @Input() childKegList: Keg[];
-
-  // constructor() { }
-
   @Output() sendKeg = new EventEmitter();
 
   submitKeg(name: string, brand: string, price: string, percent: string) {

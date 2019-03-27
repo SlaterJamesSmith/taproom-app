@@ -1,2 +1,3 @@
 <app-new-keg-form (sendKeg)="addKeg($event)"></app-new-keg-form>
-<app-keg-menu></app-keg-menu>
+<app-keg-menu [childKegList]="masterKegList" (editKeg)="editKeg($event)"></app-keg-menu>
+<app-edit-keg *ngIf="selectedKeg" [childSelectedKeg]="selectedKeg" (done)="resetSelected($event)"></app-edit-keg>

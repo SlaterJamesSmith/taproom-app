@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import { Keg } from './../models/keg.model';
 import { KEGS } from './../mock-data/mock-kegs';
 @Component({
@@ -6,13 +6,12 @@ import { KEGS } from './../mock-data/mock-kegs';
   templateUrl: './keg-menu.component.html',
   styleUrls: ['./keg-menu.component.scss']
 })
-export class KegMenuComponent implements OnInit {
-  kegs: Keg[] = KEGS;
-
+export class KegMenuComponent {
+  @Input() childKegList: Keg[];
+  @Output() editKeg = new EventEmitter();
   constructor() { }
 
-  ngOnInit() {
-
+  editButtonClicked(kegToEdit: Keg) {
+    this.editKeg.emit(kegToEdit);
   }
-
 }

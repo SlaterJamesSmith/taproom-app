@@ -10,13 +10,18 @@ import { KEGS } from './mock-data/mock-kegs';
 export class AppComponent {
 
   masterKegList: Keg[] = KEGS;
+  selectedKeg: Keg = null;
 
   addKeg(newKeg: Keg) {
     this.masterKegList.push(newKeg);
   }
 
-  // editKegList() {
-  //   this.selectedTask = clickedTask;
-  // }
+  editKeg(keg) {
+    this.selectedKeg = keg;
+  }
+
+  resetSelected(){
+    this.selectedKeg = null;
+  }
 
 }

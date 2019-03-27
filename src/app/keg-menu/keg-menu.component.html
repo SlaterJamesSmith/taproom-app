@@ -1,7 +1,9 @@
 <h1>Beer Menu</h1>
 
-<ul *ngFor="let currentKeg of kegs">
+<ul *ngFor="let currentKeg of childKegList">
     <li>{{currentKeg.name}}</li>
     <li>{{currentKeg.brand}}</li>
     <li>{{currentKeg.price}}</li>
+    <li>{{currentKeg.ac}}</li>
+    <button (click)="editButtonClicked(currentKeg)">Edit</button>
 </ul>
